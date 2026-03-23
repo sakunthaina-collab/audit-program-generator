@@ -393,7 +393,7 @@ Auditor must:
 ### Audit Planning Principles
 
 | Principle | Example |
-|-----------|---------|
+|-----------|----------|
 | **Risk-Based** | Audit high-risk areas first |
 | **Business Aligned** | Don't disrupt operations |
 | **Materiality** | Focus on significant issues |
@@ -406,6 +406,192 @@ Auditor must:
 ✅ Right: "Coordinate to reschedule while achieving objectives"
 
 Example: During quarter-end close → Reschedule to after close
+          `
+        },
+        {
+          id: 9,
+          title: '9. Regulatory & Compliance Framework (Banking)',
+          content: `
+### ประกาศธนาคารแห่งประเทศไทย (ธปท.)
+
+**สนส. 6/2566 - Internal Audit Standards**
+- ✅ ผู้ตรวจสอบต้องมีความเป็นอิสระ
+- ✅ วางแผนการตรวจสอบตามฐานความเสี่ยง (Risk-Based Audit Plan)
+- ✅ ต้องมุ่งเน้นการวิเคราะห์หาสาเหตุแท้จริง (Root Cause Analysis)
+- ✅ ไม่ใช่เพียงแค่บันทึกสิ่งที่เกิดขึ้น
+
+**สนส. 5/2566 - Compliance Standards**
+- ✅ หน่วยงาน Compliance ต้องเป็น Business Strategic Partner
+- ✅ สร้างวัฒนธรรมการปฏิบัติตามกฎเกณฑ์ในองค์กร
+
+**สกช. 5/2566 - IT Risk Framework**
+- ✅ Confidentiality (ความลับ)
+- ✅ Integrity (ความถูกต้องเชื่อถือได้)
+- ✅ Availability (ความพร้อมใช้งาน)
+
+### PDPA & AML/CFT
+
+**PDPA Key Points**:
+- ✅ Consent Management (ความยินยอมชัดแจ้ง)
+- ✅ Data Subject Rights (สิทธิของเจ้าของข้อมูล)
+- ✅ DPIA (Data Protection Impact Assessment)
+
+**AML/CFT**:
+- ✅ KYC (Know Your Customer)
+- ✅ CDD (Customer Due Diligence)
+- ✅ Sanctions List Checking
+          `
+        },
+        {
+          id: 10,
+          title: '10. IT Audit & Cybersecurity',
+          content: `
+### IT General Controls (ITGC)
+
+| ประเด็น | ความหมาย |
+|--------|---------|  
+| **Access Security** | User ID/Password, Multi-factor Auth |
+| **SDLC** | System Development Life Cycle |
+| **Change Management** | Change Request, Approval, Testing |
+| **Backup & Recovery** | Daily Backup, Disaster Recovery Plan |
+
+### IT Application Controls
+
+**3 ระดับการควบคุม**:
+1. **Input Controls** - Validation, Authorization, Error Handling
+2. **Processing Controls** - Calculation Accuracy, Completeness
+3. **Output Controls** - Reconciliation, Approval, Distribution
+
+### Cybersecurity & BCP
+
+**Cybersecurity Framework**:
+- ✅ Network Security
+- ✅ Encryption
+- ✅ Firewall & IDS
+- ✅ Vulnerability Assessment
+
+**Business Continuity Plan**:
+- ✅ Disaster Recovery Plan (DRP)
+- ✅ Recovery Time Objective (RTO)
+- ✅ Recovery Point Objective (RPO)
+- ✅ Regular Testing & Drills
+
+**Frameworks**: COBIT 2019, ISO 27001, NIST Cybersecurity Framework
+          `
+        },
+        {
+          id: 11,
+          title: '11. Data Analytics & Machine Learning',
+          content: `
+### Continuous Auditing SQL Queries
+
+**Duplicate Transactions Detection**:
+\`\`\`sql
+SELECT transaction_id, customer_id, amount
+FROM transactions
+WHERE (customer_id, amount, transaction_date) IN (
+    SELECT customer_id, amount, transaction_date
+    FROM transactions
+    GROUP BY customer_id, amount, transaction_date
+    HAVING COUNT(*) > 1
+);
+\`\`\`
+
+**Unusual Amount Detection**:
+\`\`\`sql
+SELECT transaction_id, customer_id, amount
+FROM transactions
+WHERE amount > (
+    SELECT AVG(amount) + (2 * STDDEV(amount))
+    FROM transactions
+);
+\`\`\`
+
+### Machine Learning for Predictive Auditing
+
+**Use Cases**:
+1. **NPL Prediction** - Random Forest สำหรับทำนาย Non-Performing Loans
+2. **Credit Risk Scoring** - Logistic Regression สำหรับประเมินความเสี่ยง
+3. **Fraud Detection** - Fuzzy Matching สำหรับตรวจจับรายชื่อปลอม
+
+### Dashboard & Visualization
+
+**Power BI/Tableau Metrics**:
+- ✅ Transaction Volume
+- ✅ Average Transaction Amount
+- ✅ Anomaly Count
+- ✅ Risk Score Distribution
+          `
+        },
+        {
+          id: 12,
+          title: '12. Fraud Risk Management (Advanced)',
+          content: `
+### Fraud Pentagon (5 องค์ประกอบ)
+
+**ขยายจาก Fraud Triangle**:
+
+| องค์ประกอบ | ความหมาย |
+|----------|---------|  
+| **Pressure** | แรงกดดัน (เงินเดือนต่ำ, หนี้สิน) |
+| **Opportunity** | โอกาส (ไม่มี SoD, ไม่มี Audit Trail) |
+| **Rationalization** | การปลอบใจตนเอง ("ยืมไปก่อน") |
+| **Competence** | ความสามารถ (รู้ระบบ, เข้าถึงได้) |
+| **Arrogance** | ความเย่อหยิ่ง (คิดว่าตัวเองเก่ง) |
+
+### Management Override
+
+**Red Flags**:
+- ✅ ผู้บริหารบ่อยครั้งปฏิเสธการอนุมัติ
+- ✅ การเปลี่ยนแปลงบัญชีหลังจากปิดบัญชี
+- ✅ Journal entries ที่ไม่ปกติ
+- ✅ ธุรกรรมกับบุคคลที่เกี่ยวข้อง (Related Party)
+
+### Red Flags by Industry
+
+**Banking**: Split Loans, Nominee Accounts, NPL Evergreening, Interest Rate Manipulation
+
+**Retail**: Vendor Concentration, Price Outliers, Inventory Discrepancies
+          `
+        },
+        {
+          id: 13,
+          title: '13. Financial & Business Acumen',
+          content: `
+### Accounting Cycles
+
+| Cycle | ประเด็นการตรวจสอบ |
+|-------|------------------|  
+| **Revenue** | ขาย, ลูกหนี้, เก็บเงิน |
+| **Expenditure** | ซื้อ, เจ้าหนี้, จ่ายเงิน |
+| **Payroll** | เงินเดือน, ภาษี, สวัสดิการ |
+| **Inventory** | ซื้อ, เก็บ, ขาย |
+
+### Investment Appraisal Methods
+
+**NPV (Net Present Value)**:
+- NPV = Σ(CF_t / (1+r)^t) - Initial Investment
+- ถ้า NPV > 0 → ลงทุนได้
+
+**Payback Period**: จำนวนปีที่ใช้เพื่อคืนทุน
+
+**IRR (Internal Rate of Return)**: อัตราผลตอบแทนที่ทำให้ NPV = 0
+
+### Managerial Accounting
+
+**Cost-Volume-Profit (CVP) Analysis**:
+- Break-even Point = Fixed Cost / (Price - Variable Cost)
+
+**Variance Analysis**:
+- Material Variance
+- Labor Variance
+- Overhead Variance
+
+### Strategic Management
+
+**SWOT Analysis**: Strengths, Weaknesses, Opportunities, Threats
+
+**Porter's Five Forces**: Competitive Rivalry, Supplier Power, Buyer Power, Substitutes, New Entrants
           `
         }
       ]

@@ -135,7 +135,7 @@ Navigate through 7 tabs to review:
 Click "Knowledge Base" button in navigation bar
 
 #### 2. Browse Topics
-- **8 comprehensive sections** covering all aspects of Internal Audit
+- **13 comprehensive sections** covering all aspects of Internal Audit
 - Each section includes:
   - Definitions and key concepts
   - Real-world examples
@@ -266,8 +266,65 @@ WHERE user_id NOT IN (
 - **Efficiency**: Use data analytics
 
 **Timing Strategy:**
-- ❌ Wrong: "Must audit per plan even if it disrupts business"
-- ✅ Right: "Coordinate to reschedule while achieving objectives"
+- Wrong: "Must audit per plan even if it disrupts business"
+- Right: "Coordinate to reschedule while achieving objectives"
+
+### 9. Regulatory & Compliance Framework (Banking)
+**Key Regulations:**
+- **สนส. 6/2566** - Internal Audit Standards
+- **สนส. 5/2566** - Compliance Standards
+- **สกช. 5/2566** - IT Risk Framework (CIA Triad)
+
+**PDPA & AML/CFT:**
+- Consent Management, Data Subject Rights, DPIA
+- KYC, CDD, Sanctions List Checking
+
+### 10. IT Audit & Cybersecurity
+**IT General Controls (ITGC):**
+- Access Security, SDLC, Change Management, Backup & Recovery
+
+**IT Application Controls:**
+- Input Controls, Processing Controls, Output Controls
+
+**Cybersecurity & BCP:**
+- Network Security, Encryption, Disaster Recovery Plan
+- Frameworks: COBIT 2019, ISO 27001, NIST
+
+### 11. Data Analytics & Machine Learning
+**Continuous Auditing:**
+- Duplicate Transactions Detection
+- Unusual Amount Detection
+- Unauthorized Access Detection
+
+**Machine Learning:**
+- NPL Prediction, Credit Risk Scoring, Fraud Detection
+
+**Visualization:**
+- Power BI/Tableau Dashboards
+
+### 12. Fraud Risk Management (Advanced)
+**Fraud Pentagon (5 Elements):**
+- Pressure, Opportunity, Rationalization, Competence, Arrogance
+
+**Management Override:**
+- Unusual approvals, Journal entries, Related party transactions
+
+**Red Flags by Industry:**
+- Banking: Split Loans, Nominee Accounts, NPL Evergreening
+- Retail: Vendor Concentration, Price Outliers
+
+### 13. Financial & Business Acumen
+**Accounting Cycles:**
+- Revenue, Expenditure, Payroll, Inventory
+
+**Investment Appraisal:**
+- NPV, Payback Period, IRR
+
+**Managerial Accounting:**
+- CVP Analysis, Variance Analysis, Budgeting
+
+**Strategic Management:**
+- SWOT Analysis, Porter's Five Forces
 
 ---
 
